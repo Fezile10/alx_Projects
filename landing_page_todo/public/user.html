@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: lavender;
+        }
+        header {
+            padding: 20px;
+            background-image: linear-gradient(lightcyan, lavender);
+            color: darkslateblue;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+        }
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 48px;
+            color: darkslateblue;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            margin: 20px 0;
+            font-family: 'Brush Script MT', cursive;
+
+        }
+        .contact {
+            font-size: 18px;
+            color: darkslateblue;
+        }
+        .articles {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .article {
+            background-color: aliceblue;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+            text-align: left;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+        .article img {
+            width: 15%;
+            height: auto;   
+        }
+        .article h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .article p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .shots img {
+            height: 320px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 25px;
+            border: 1px solid violet;
+            border-radius: 5px;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+        }
+        ul {
+        list-style-type: none;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: aliceblue;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: inline-block;
+        color:  #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+        background-color: violet;
+        }
+        .active {
+        background-color: magenta;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="todo.html">Home</a></li>
+            <li><a class="active" href="#user">User</a></li>
+            <li><a href="tasks.html">Task</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Demo</a></li>
+          </ul>
+        <h1>Task Tracker</h1>
+        <img src="assets/task.png">
+        <p class="contact">Author: Fezile Mnikazi</p>
+        <p>Welcome to our user creation and login page! Here, we prioritize your experience by providing a seamless way to join our community or access your existing account. 
+            Whether you’re signing up for the first time or returning to dive back into our content, 
+            our intuitive design and security features ensure that you can easily manage your account with confidence. 
+            Let’s get started on your journey with us!</p>
+    </header>
+    <h1>Key Features</h1>
+    <section class="articles">
+        
+        <div class="article">
+            <img src="assets/login.png" >
+            <h3>User login</h3>
+            <p>Our login page is user friendly and easy to navigate for all users. I have incorporated minimal and clear prompts to
+                help the user know where to click. Users can easily manage their login sessions, allowing them
+                to stay logged in on trusted devices. This feature enhances security and also encourages greater engagement with the 
+                platform.
+            </p>
+        </div>
+        <div class="article">
+            <img src="assets/register.png" >
+            <h3>New user registration</h3>
+            <p>Simple and intuitive form requiring only essential information such as username, email, and password.
+                 With a clear input and labels to guide users through each step. We prioritize privacy when the user is 
+                punching in their password it is masked as best practices for online safety. Upon
+            successful registration, users can log in immediately, allowing them to start exploring the 
+        platform right away.</p>
+        </div>
+
+        <div class="shots">
+            <img class="shots" src="assets/login-app.png" >
+            
+        </div>
+        <div class="shots">
+            <img src="assets/register-app.png" >
+        </div>
+
+    </section>
+</body>
+</html>

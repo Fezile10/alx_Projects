@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: lavender;
+        }
+        header {
+            padding: 20px;
+            background-image: linear-gradient(lightcyan, lavender);
+            color: darkslateblue;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+        }
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            color: darkslateblue;
+            font-size: 48px;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            margin: 20px 0;
+            font-family: 'Brush Script MT', cursive;
+
+        }
+        .contact {
+            font-size: 18px;
+            color: #333;
+        }
+        .articles {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .article {
+            background-color: aliceblue;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+            text-align: left;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+        .article img {
+            width: 15%;
+            height: auto;   
+        }
+        .article h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .article p {
+            font-size: 14px;
+            color: darkslateblue;
+        }
+
+        .shots img {
+            height: 265px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 25px;
+            border: 1px solid violet;
+            border-radius: 5px;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+        }
+        ul {
+        list-style-type: none;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: aliceblue;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: inline-block;
+        color:  #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+        background-color: violet;
+        }
+        .active {
+        background-color: magenta;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="todo.html">Home</a></li>
+            <li><a href="user.html">User</a></li>
+            <li><a class="active" href="#task">Task</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Demo</a></li>
+          </ul>
+        <h1>Task Tracker</h1>
+        <img src="assets/task.png">
+        <p class="contact">Author: Fezile Mnikazi</p>
+        <p>Welcome to Task Tracker creation and tracking page! Here, you can effortlessly organize your tasks and boost your productivity.
+             Whether you're managing personal projects or collaborating on team assignments, our intuitive interface allows you to create, update, and track your tasks in real-time. 
+             Stay focused and motivated as you check off your accomplishments and plan your next steps.
+             Let’s turn your to-do list into a done list!</p>
+    </header>
+    <h1>Key Features</h1>
+    <section class="articles">
+        <div class="article">
+            <img src="assets/addTask.png" >
+            <h3>Add a new task</h3>
+            <p>The user friendly design allows you to add a new task quickly and effortlessly. With clear and 
+                simple prompts with no distractions on the page. The fun about this is that you get to see
+            your task instantly after creation, with a priority setting to help you focus on what is 
+        important.</p>
+        </div>
+        <div class="article">
+            <img src="assets/viewTask.png">
+            <h3>View the task list</h3>
+            <p>For tasks that still need to be completed regularly, our view task feature allows you view the list of all 
+                the tasks. This feature add a layer of organization to help you maintain clarity and control over your workload.</p>
+        </div>
+        <div class="article">
+            <img src="assets/progress.png">
+            <h3>Keep up with your progress</h3>
+            <p>Monitor the status of your tasks as you work through your list. Our progress tracking feature lets you see pending, 
+                and completed tasks at a glance, also a progression bar of the total completion percentage
+                providing motivation and a sense of accomplishment.</p>
+        </div>
+        </div>
+        <br>
+        <div class="shots">
+            <img class="shots" src="assets/addTask-app.png" >
+        </div>
+        <div class="shots">
+            <img src="assets/viewTask-app.png">
+        </div>
+        <div class="shots">
+            <img src="assets/progress-app.png">
+        </div>
+    </section>
+</body>
+</html>
