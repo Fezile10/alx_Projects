@@ -1,4 +1,4 @@
-t apiUrl = '/api/tasks';
+const apiUrl = '/api/tasks';
 const progressUrl = '/api/progress';
 
 // Function to update the progress bar
@@ -98,7 +98,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     });
 
     if (response.ok) {
-        window.location.href = '/';
+        window.location.href = 'profile.html';
     } else {
         alert('Login failed');
     }
@@ -125,9 +125,3 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     }
 });
 
-
-window.onload = function () {
-    window.location.href = '/profile.html';
-};
-
-Details panel collaps

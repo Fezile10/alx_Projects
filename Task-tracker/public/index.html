@@ -3,200 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Tracker</title>
+    <title>Login/Register</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      body {
-      font-family: sans-serif;
-      background-color: #f0f0f0;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    .container {
-      width: 400px;
-      max-height: 700px;
-      margin: 50px auto;
-      background-color: #2F4F4F;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(117, 92, 92, 0.1);
-      display: -ms-inline-grid;
-      justify-content: space-between;
-      gap: 10px; /* Adds spacing between the buttons */
-    }
+        .auth-container {
+            background-image: linear-gradient(to right,  GreenYellow, Seagreen);
+            padding: 20px;
+            border-radius: 8px;
+            border: 5px solid darkslategrey;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
 
-    .form-group{
-      padding: 20px;
-      justify-content: space-between;
-      display: flex;
-      gap: 10px; /* Adds spacing between the buttons */
-    }
+        .form-toggle {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+ 
+        .form-toggle button {
+            width: 48%;
+            padding: 10px;
+            background-color: darkslategray;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        .form-toggle button.active {
+            background-color: green;
+        }
 
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      border: 3px deep #2F4F4F;
-      border-radius: 5px;
-      box-sizing: border-box;
-      margin-bottom: 10px;
-    }
+        .form-toggle button:not(.active) {
+            background-color: darkseagreen;
+        }
 
-    button {
-      background-color: #8FBC8F;
-      color: #052239;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      display: grid;
-    }
+        .form {
+            display: none;
+        }
 
-    #prioritySelect{
-      background-color: #8FBC8F;
-      color: #052239;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      display: grid;
-    }
+        .form.active {
+            display: block;
+        }
 
-    #prioritySelect:hover {
-      background-color: #6ebe85;
-    }
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px deep #ccc;
+            border-radius: 4px;
+        }
 
-    #AddTask:hover {
-      background-color: #6ebe85;
-    }
-    #ViewTask:hover {
-      background-color: #6ebe85;
-    }
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-    #taskList {
-      list-style: none;
-      border-radius: 3px solid #4CAF50;
-      padding: 10px;
-      color: #052239;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-weight: bold;
-      
-    }
+        form button:hover {
+            background-color: #4cae4c;
+        }
 
-    #taskList li {
-      background-color:  #6ebe85;
-      border: 3px deep #2F4F4F;
-      border-radius: 5px;
-      margin-bottom: 5px;
-      padding: 10px;
-    }
-
-    #taskList li span {
-      float: left;
-    }
-
-    #taskList li button {
-      float: right;
-      background-color: #4f7294;
-      color: #052239;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-weight: bold;
-      padding: 5px 10px;
-      margin-left: 5px;
-      margin-bottom: 5px;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    #taskList li button:hover {
-      background-color: #20B2AA;
-    }
-
-    .progress {
-    margin: 20px 0;
-    border-radius: 4px;
-    height: 30px;
-    width: 100%;
-    position: fixed;
-    }
-
-    #progressBar {
-      background-image: linear-gradient(to right,  GreenYellow, Seagreen);
-      color: #052239;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-weight: bold;
-      text-align: center;
-      line-height: 30px;
-      border-radius: 4px;
-      width: 0%;
-      height: 30px;
-    }
-
-    /* Style for completed tasks */
-    .completed {
-        text-decoration: line-through;
-        color: gray;
-    }
-
-    /* Optional: Different colors for priority levels */
-    .low-priority {
-        color: green;
-    }
-
-    .medium-priority {
-        color: orange;
-    }
-
-    .high-priority {
-        color: red;
-    }
-    .logo{
-      margin-left: 70%;
-      border-radius: 30px;
-      border: 2px solid goldenrod;
-    } 
-    
     </style>
 </head>
 <body>
-    <div class="container"> 
-      <a href="profile.html">
-        <img src="/assets/logout.png" style="width:42px;height:42px; padding-bottom: 20px;">
-        </a>
-        <img class="logo"  src="/assets/logo.png" style="width:62px;height:62px;">
-        <h1>Task tracker</h1>
-        <div class="input-group">
-          <input type="text" id="taskInput" placeholder="Enter a new task">
-      </div>
-        <div class="form-group">
-          
-            <button id="AddTask"
-            onclick="addTask()">Add Task</button>
+    <div class="auth-container">
+        <div class="form-toggle">
+            <button id="loginToggle" class="active">Login</button>
+            <button id="registerToggle">Register</button>
+        </div>
 
-            <button id="ViewTask"
-            onclick="viewTasks()">View Tasks</button>
-            
-        </div>
-        <div class="listContainer">
-          <ul id="taskList"></ul>
-        </div>
-        
-        <div class="progress"></div>
-            <div id="progressBar"></div>
-        </div>  
+        <!-- Login Form -->
+        <form id="loginForm" class="form active">
+            <h1>Login</h1>
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="form">
+            <h1>Register</h1>
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
     </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
-
 
